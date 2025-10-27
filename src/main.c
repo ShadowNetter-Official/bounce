@@ -5,8 +5,8 @@
 
 typedef struct ObjectStruct
 {
-	int x;
-	int y;
+	double x;
+	double y;
 	double vx;
 	double vy;
 } Object;
@@ -94,7 +94,7 @@ int calc(double loss, double g, double dt, Object* ball, int height, int width, 
 	}
 	if (ball->x <= 0)
 	{
-		ball->x = ball->x + 1;
+		ball->x = 1;
 		ball->vx = (ball->vx * -1) * loss;
 	}
 	int by = (int)ball->y;
